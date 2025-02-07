@@ -45,7 +45,16 @@ local Button = Tab:CreateButton({
 })
 local Tab1 = Window:CreateTab("Misc", "rewind")
 local Button = Tab:CreateButton({
-   Name = "List Of Client Items",
+   Name = "DESTROY EVERYTHING!!!!!!!!!!!!!! (only the hub)",
    Callback = function()
+   Rayfield:Destroy()
+})
+local Button = Tab:CreateButton({
+   Name = "DESTROY EVERYTHING!!!!!!!!!!!!!!",
+   Callback = function()
+  for i, v in game:GetDescendants() do
+	v.Name = "GIT DESTROYED!!!!"
+	v:Destroy()
+  end
    Rayfield:Destroy()
 })
