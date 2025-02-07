@@ -1,6 +1,6 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "Breaking Dandy's World",
+   Name = "Incognito's Dandy's World Hub",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "idk",
    LoadingSubtitle = "creepair",
@@ -36,10 +36,10 @@ local Tab = Window:CreateTab("Tab Example", "rewind")
 local Button = Tab:CreateButton({
    Name = "List Of Client Items",
    Callback = function()
-   warn("-- Incognito's Dandy's World Hub -- \n -- Pop \n -- PopBottle \n -- Gumballs \n -- HealthKit \n -- Chocolate \n -- Stopwatch \n -- SpeedCandy \n -- ProteinBar \n -- Instructions \n -- StealthCandy \n -- SkillCheckCandy \n -- JumperCable \n -- Bandage \n -- EnigmaCandy \n -- AirHorn \n -- ChocolatesBox \n -- EjectButton \n -- SmokeBomb \n -- Valve")
+   warn(" Incognito's Dandy's World Hub -- \n -- Pop \n -- PopBottle \n -- Gumballs \n -- HealthKit \n -- Chocolate \n -- Stopwatch \n -- SpeedCandy \n -- ProteinBar \n -- Instructions \n -- StealthCandy \n -- SkillCheckCandy \n -- JumperCable \n -- Bandage \n -- EnigmaCandy \n -- AirHorn \n -- ChocolatesBox \n -- EjectButton \n -- SmokeBomb \n -- Valve")
   game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Notification", -- Required
-	Text = "Check Console", -- Required
+	Text = "Check Console!", -- Required
 })
    end,
 })
