@@ -32,7 +32,7 @@ local Window = Rayfield:CreateWindow({
       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-local Tab = Window:CreateTab("Tab Example", "rewind")
+local Tab = Window:CreateTab("Client", "rewind")
 local Button = Tab:CreateButton({
    Name = "List Of Client Items",
    Callback = function()
@@ -42,4 +42,10 @@ local Button = Tab:CreateButton({
 	Text = "Check Console!", -- Required
 })
    end,
+})
+local Tab1 = Window:CreateTab("Misc", "rewind")
+local Button = Tab:CreateButton({
+   Name = "List Of Client Items",
+   Callback = function()
+   Rayfield:Destroy()
 })
