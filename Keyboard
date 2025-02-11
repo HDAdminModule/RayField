@@ -39,3 +39,16 @@ local Button = Tab:CreateButton({
     game:GetService("VirtualUser"):SetKeyDown("a")
    end,
 })
+local Tab2 = Window:CreateTab("Github", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "github.com/HDAdminModule",
+   Callback = function()
+   setclipboard("https://www.github.com/HDAdminModule")
+Rayfield:Notify({
+   Title = "Github Copied",
+   Content = "Attempted to copy github using setclipboard() (i don't know if it works on ur exec or not)",
+   Duration = 3,
+   Image = 4483362458,
+})
+   end,
+})
