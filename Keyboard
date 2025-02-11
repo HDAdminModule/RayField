@@ -40,7 +40,7 @@ local Button = Tab:CreateButton({
    end,
 })
 local Tab2 = Window:CreateTab("Github", 4483362458) -- Title, Image
-local Button = Tab:CreateButton({
+local Button = Tab2:CreateButton({
    Name = "github.com/HDAdminModule",
    Callback = function()
    setclipboard("https://www.github.com/HDAdminModule")
