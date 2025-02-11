@@ -34,6 +34,37 @@ local Window = Rayfield:CreateWindow({
 })
 local Tab = Window:CreateTab("Keys", 4483362458) -- Title, Image
 local Button = Tab:CreateButton({
+   Name = "Release all Keys",
+   Callback = function()
+game:GetService("VirtualUser"):SetKeyUp("a")
+game:GetService("VirtualUser"):SetKeyUp("b")
+game:GetService("VirtualUser"):SetKeyUp("c")
+game:GetService("VirtualUser"):SetKeyUp("d")
+game:GetService("VirtualUser"):SetKeyUp("e")
+game:GetService("VirtualUser"):SetKeyUp("f")
+game:GetService("VirtualUser"):SetKeyUp("g")
+game:GetService("VirtualUser"):SetKeyUp("h")
+game:GetService("VirtualUser"):SetKeyUp("i")
+game:GetService("VirtualUser"):SetKeyUp("j")
+game:GetService("VirtualUser"):SetKeyUp("k")
+game:GetService("VirtualUser"):SetKeyUp("l")
+game:GetService("VirtualUser"):SetKeyUp("m")
+game:GetService("VirtualUser"):SetKeyUp("n")
+game:GetService("VirtualUser"):SetKeyUp("o")
+game:GetService("VirtualUser"):SetKeyUp("p")
+game:GetService("VirtualUser"):SetKeyUp("q")
+game:GetService("VirtualUser"):SetKeyUp("r")
+game:GetService("VirtualUser"):SetKeyUp("s")
+game:GetService("VirtualUser"):SetKeyUp("t")
+game:GetService("VirtualUser"):SetKeyUp("u")
+game:GetService("VirtualUser"):SetKeyUp("v")
+game:GetService("VirtualUser"):SetKeyUp("w")
+game:GetService("VirtualUser"):SetKeyUp("x")
+game:GetService("VirtualUser"):SetKeyUp("y")
+game:GetService("VirtualUser"):SetKeyUp("z")
+   end,
+})
+local Button = Tab:CreateButton({
    Name = "A key",
    Callback = function()
     game:GetService("VirtualUser"):SetKeyDown("a")
