@@ -55,9 +55,7 @@ local Button = PTab:CreateButton({
        while wait(.25) do
         for _, v in game.Players:GetPlayers() do
             local ESP = Instance.New("Highlight",v.Character)
-          if v.Character.Name == game.Players.LocalPlayer.Name then
-            ESP:Destroy()
-          end
+            speaker.Character.Highlight:Destroy()
         end
       end
    end,
@@ -67,9 +65,7 @@ local Button = PTab:CreateButton({
    Callback = function()
         for i, Player in game.Players:GetPlayers() do
             local ESP = Instance.New("Highlight", Player.Character)
-          if v.Character.Name == game.Players.LocalPlayer.Name then
-            ESP:Destroy()
-          end
+            speaker.Character.Highlight:Destroy()
       end
    end,
 })
