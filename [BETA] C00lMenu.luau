@@ -1,6 +1,3 @@
-game.Players.LocalPlayer.Character.ChildAdded:Connect(function(child)
-    if child.ClassName == "Highlight" then child:Destroy() end
-end)
 game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 local speaker = game.Players.LocalPlayer --im using this because of infinite yield
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
@@ -56,18 +53,18 @@ local Button = PTab:CreateButton({
    Name = "Enable ESP (Permenanent)",
    Callback = function()
        while wait(.25) do
-        for _, v in game.Players:GetPlayers() do
-            local ESP = Instance.New("Highlight",v.Character)
-        end
+	for i, v in game.Players:GetChildren() do
+	    local ESP = Instance.New("Highlight",v.Character)
+	end
       end
    end,
 })
 local Button = PTab:CreateButton({
    Name = "Enable ESP (One-Time Use)",
    Callback = function()
-        for i, Player in game.Players:GetPlayers() do
-            local ESP = Instance.New("Highlight", Player.Character)
-      end
+	for i, v in game.Players:GetChildren() do
+	    local ESP = Instance.New("Highlight",v.Character)
+	end
    end,
 })
 local Slider = PTab:CreateSlider({
