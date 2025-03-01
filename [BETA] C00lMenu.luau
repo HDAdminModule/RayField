@@ -65,8 +65,8 @@ local Button = PTab:CreateButton({
 local Button = PTab:CreateButton({
    Name = "Enable ESP (One-Time Use)",
    Callback = function()
-        for _, v in game.Players:GetPlayers() do
-            local ESP = Instance.New("Highlight",v.Character)
+        for i, Player in game.Players:GetPlayers() do
+            local ESP = Instance.New("Highlight", Player.Character)
           if v.Character.Name == game.Players.LocalPlayer.Name then
             ESP:Destroy()
           end
