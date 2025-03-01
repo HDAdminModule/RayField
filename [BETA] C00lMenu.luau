@@ -1,4 +1,4 @@
-game.Players.LocalPlayer.Humanoid.UseJumpPower = true
+game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 local speaker = game.Players.LocalPlayer --im using this because of infinite yield
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
