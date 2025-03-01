@@ -2,9 +2,9 @@ game.Players.LocalPlayer.Humanoid.UseJumpPower = true
 local speaker = game.Players.LocalPlayer --im using this because of infinite yield
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "C00lMenu",
+   Name = "[BETA] C00lMenu V0.1",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "C00lMenu",
+   LoadingTitle = "[BETA] C00lMenu",
    LoadingSubtitle = "by github.com/HDAdminModule",
    Theme = "Bloom", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
