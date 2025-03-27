@@ -3,7 +3,7 @@ local Window = Rayfield:CreateWindow({
    Name = game.Name.." | OxyHubV3",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "OxyHubV3",
-   LoadingSubtitle = "Owned by Oxy1, fixed by HDAdminModule",
+   LoadingSubtitle = "fixed by HDAdminModule",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
