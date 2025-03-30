@@ -676,6 +676,7 @@ local Button23 = GBTab:CreateButton({
 local OPTab = Window:CreateTab("Overpowered", "rewind")
 local Section8 = OPTab:CreateSection("Item Giver")
 local Paragraph = OPTab:CreateParagraph({Title = "Note:", Content = "Getting/Spamming Multiple Of 1 Type Of Items May Cause The Item To Break And Be Unuseable/Unequippable.\nIt Is Recommended To Only Grab 1 Item At Once, Especially If Its An Item Everyone Can Use."})
+local Dropdown = OPTab:CreateDropdown({
    Name = "Item",
    Options = ItemsTable,
    CurrentOption = {"Med Kit"},
@@ -1108,6 +1109,7 @@ local Toggle12 = CTab:CreateToggle({
 		end
 		task.wait(.1)
 	end
+	end
 })
 local Section15 = CTab:CreateSection("Break Enemies")
 local Button55 = CTab:CreateButton({
@@ -1400,9 +1402,7 @@ local Toggle18 = MTab:CreateToggle({
 		Lighting.GlobalShadows = GlobalShadows
 	end
 	end
-	end
 })
 Notify('Loaded!', "Script Successfully Loaded!\nJoin Our Discord At (https://discord.com/invite/XHS5WPxMrr) For Support, Questions And Updates!\nThe Script Is Open Source So Feel Free To Look At The Code!", 'rbxassetid://4483345998', 15)
-	ScriptLoaded = true
-	OrionLib:Init()
-end
+ScriptLoaded = true
+OrionLib:Init()
