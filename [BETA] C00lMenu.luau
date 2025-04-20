@@ -36,7 +36,7 @@ local Window = Rayfield:CreateWindow({
 })
 Rayfield:Notify({
    Title = "Notification",
-   Content = "Hey "..game.Players.LocalPlayer.Name.."! Thanks for using C00lMenu!",
+   Content = "Hey, "..game.Players.LocalPlayer.Name.."! Thanks for using C00lMenu!",
    Duration = 6.5,
    Image = 4483362458,
 })
