@@ -1,19 +1,3 @@
---Stuff
-local Spinstable = {
-  "Dominus Pet"
-  "x99 Cash or x10 Cash"
-  "2.5K Cash"
-  "1K Cash"
-  "250 Gems"
-  "100 Gems"
-  "75 Gems"
-  "10 Spins"
-  "3 Spins"
-  "1 Spin"
-}
-
-
---Rayfield
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "[Dig To Earth's Core] HDAdmin's Hub",
@@ -50,36 +34,6 @@ local Window = Rayfield:CreateWindow({
    }
 })
 local STab = Window:CreateTab("Main", "rewind")
-local Dropdown = STab:CreateDropdown({
-   Name = "Spin Manipulation",
-   Options = Spinstable,
-   CurrentOption = {"Dominus Pet"},
-   MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Options)
-      if CurrentOption == "Dominus Pet" then
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(4)
-      elseif CurrentOption == "x99 Cash or x10 Cash" then
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(8)
-      elseif CurrentOption = "2.5K Cash" then
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(2)
-      elseif CurrentOption = "1K Cash" then
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(6)
-      elseif CurrentOption = "250 Gems" then
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(5)
-      elseif CurrentOption = "100 Gems" then
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(1)
-      elseif CurrentOption = "75 Gems" then
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(9)
-      elseif CurrentOption = "10 Spins" then
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(10)
-      elseif CurrentOption = "3 Spins" then
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(7)
-      elseif CurrentOption = "1 Spins" then
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(3)
-      end
-   end,
-})
 local Toggle = STab:CreateToggle({
    Name = "Repeat x99 Cash or x10 Cash",
    CurrentValue = false,
@@ -118,5 +72,66 @@ local Button = STab:CreateButton({
    Name = "Give Gems from Slider",
    Callback = function()
    game.ReplicatedStorage.Remotes.GemEvent:FireServer(_G.Gems)
+   end,
+})
+local SMTab = Window:CreateTab("Spin Manipulation", 4483362458) -- Title, Image
+local Button = SMTab:CreateButton({
+   Name = "Dominus Pet",
+   Callback = function()
+   game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(4)
+   end,
+})
+local Button = SMTab:CreateButton({
+   Name = "x99 Cash / x10 Cash",
+   Callback = function()
+   game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(8)
+   end,
+})
+local Button = SMTab:CreateButton({
+   Name = "2.5K Cash",
+   Callback = function()
+   game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(2)
+   end,
+})
+local Button = SMTab:CreateButton({
+   Name = "1K Cash",
+   Callback = function()
+   game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(6)
+   end,
+})
+local Button = SMTab:CreateButton({
+   Name = "250 Gems",
+   Callback = function()
+   game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(5)
+   end,
+})
+local Button = SMTab:CreateButton({
+   Name = "100 Gems",
+   Callback = function()
+   game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(1)
+   end,
+})
+local Button = SMTab:CreateButton({
+   Name = "75 Gems",
+   Callback = function()
+   game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(9)
+   end,
+})
+local Button = SMTab:CreateButton({
+   Name = "10 Spins",
+   Callback = function()
+   game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(10)
+   end,
+})
+local Button = SMTab:CreateButton({
+   Name = "3 Spins",
+   Callback = function()
+   game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(7)
+   end,
+})
+local Button = SMTab:CreateButton({
+   Name = "1 Spin",
+   Callback = function()
+   game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(3)
    end,
 })
