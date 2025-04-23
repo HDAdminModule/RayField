@@ -34,15 +34,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 local STab = Window:CreateTab("Main", "rewind")
-local Toggle = STab:CreateToggle({
-   Name = "Repeat x99 Cash or x10 Cash",
-   CurrentValue = false,
-   Flag = "Toggle1",
-   Callback = function(Value)
-      while Value do
-        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(8)
-        wait(.1)
-      end
+
   Rayfield:Notify({
      Title = "Notification",
      Content = "A wait() function has been added to prevent lagging",
@@ -87,6 +79,15 @@ local Button = SMTab:CreateButton({
    game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(8)
    end,
 })
+local Toggle = SMTab:CreateToggle({
+   Name = "Repeat x99 Cash or x10 Cash",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      while Value == true do
+        game.ReplicatedStorage.Remotes.SpinPrizeEvent:FireServer(8)
+        wait(.1)
+      end
 local Button = SMTab:CreateButton({
    Name = "2.5K Cash",
    Callback = function()
