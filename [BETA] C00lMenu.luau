@@ -42,7 +42,7 @@ Rayfield:Notify({
 })
 local PTab = Window:CreateTab("Player", 4483362458) -- Title, Image
 local Toggle = PTab:CreateToggle({
-   Name = "Shiftlock",
+   Name = "Enable/Disable Shiftlock",
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
@@ -56,7 +56,9 @@ local Button = PTab:CreateButton({
    Callback = function()
        while wait(.25) do
 	for i, v in game.Players:GetChildren() do
-	    local ESP = Instance.New("Highlight",v.Character)
+		if not v.Character:FindFirstChildOfClass("Highlight") then
+	    	local ESP = Instance.New("Highlight",v.Character)
+		end
 	end
       end
    end,
@@ -65,7 +67,9 @@ local Button = PTab:CreateButton({
    Name = "Enable ESP (One-Time Use)",
    Callback = function()
 	for i, v in game.Players:GetChildren() do
-	    local ESP = Instance.New("Highlight",v.Character)
+	    if not v.Character:FindFirstChildOfClass("Highlight") then
+	    	local ESP = Instance.New("Highlight",v.Character)
+		end
 	end
    end,
 })
