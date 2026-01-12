@@ -1,5 +1,5 @@
-game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 local speaker = game.Players.LocalPlayer --im using this because of infinite yield
+speaker.Character.Humanoid.UseJumpPower = true
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "[BETA] C00lMenu V0.1",
@@ -36,7 +36,7 @@ local Window = Rayfield:CreateWindow({
 })
 Rayfield:Notify({
    Title = "Notification",
-   Content = "Hey, "..game.Players.LocalPlayer.Name.."! Thanks for using C00lMenu!",
+   Content = "Hey, "..speaker.Name.."! Thanks for using C00lMenu!",
    Duration = 6.5,
    Image = 4483362458,
 })
@@ -47,7 +47,7 @@ local Toggle = PTab:CreateToggle({
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
 	while wait(.25) do
-        game.Players.LocalPlayer.DevEnableMouseLock = Value
+        speaker.DevEnableMouseLock = Value
 	end
    end,
 })
@@ -78,7 +78,7 @@ local Slider = PTab:CreateSlider({
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
       while wait(.25) do
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        speaker.Character.Humanoid.WalkSpeed = Value
       end
    end,
 })
@@ -91,7 +91,7 @@ local Slider = PTab:CreateSlider({
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
       while wait(.25) do
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+        speaker.Character.Humanoid.JumpPower = Value
       end
    end,
 })
