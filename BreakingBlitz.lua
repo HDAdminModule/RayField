@@ -400,7 +400,7 @@ local GBButton2 = GBTab:CreateButton({
 		end
    end,
 })
-local Section = Tab:CreateSection("Humanoid Deletion")
+local Section = GBTab:CreateSection("Humanoid Deletion")
 local Input = GBTab:CreateInput({
    Name = "Delete Player's Humanoid",
    CurrentValue = "",
@@ -429,7 +429,7 @@ local Button4 = GBTab:CreateButton({
 		end
    end,
 })
-local Section2 = Tab:CreateSection("Limbs Deletion")
+local Section2 = GBTab:CreateSection("Limbs Deletion")
 local Input2 = GBTab:CreateInput({
    Name = "Delete Player's Limbs",
    CurrentValue = "",
@@ -491,7 +491,7 @@ local Button6 = GBTab:CreateButton({
 		end
    end,
 })
-local Section3 = Tab:CreateSection("Character Freezing")
+local Section3 = GBTab:CreateSection("Character Freezing")
 local Input3 = GBTab:CreateInput({
    Name = "Freeze Player",
    CurrentValue = "",
@@ -524,7 +524,7 @@ local Button8 = GBTab:CreateButton({
 		end
    end,
 })
-local Section4 = Tab:CreateSection("Kill Players")
+local Section4 = GBTab:CreateSection("Kill Players")
 local Input4 = GBTab:CreateInput({
    Name = "Kill Player",
    CurrentValue = "",
@@ -560,7 +560,7 @@ local Button10 = GBTab:CreateButton({
 	end
    end,
 })
-local Section5 = Tab:CreateSection("Delete Models")
+local Section5 = GBTab:CreateSection("Delete Models")
 local Button11 = GBTab:CreateButton({
    Name = "Delete Treadmills",
    Callback = function()
@@ -1405,4 +1405,3 @@ local Toggle18 = MTab:CreateToggle({
 })
 Notify('Loaded!', "Script Successfully Loaded!\nJoin Our Discord At (https://discord.com/invite/XHS5WPxMrr) For Support, Questions And Updates!\nThe Script Is Open Source So Feel Free To Look At The Code!", 'rbxassetid://4483345998', 15)
 ScriptLoaded = true
-OrionLib:Init()
