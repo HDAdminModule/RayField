@@ -1349,4 +1349,5 @@ local Toggle18 = MTab:CreateToggle({
 	end
 })
 Notify('Loaded!', "Script Successfully Loaded!\nJoin Our Discord At (https://discord.com/invite/XHS5WPxMrr) For Support, Questions And Updates!\nThe Script Is Open Source So Feel Free To Look At The Code!", 'rbxassetid://4483345998', 15)
+Notify("Notification:","There was an error attempting to execute the getrawmetatable function, so the script was replaced with this one that doesnt have getrawmetatable or its other functions")
 ScriptLoaded = true
