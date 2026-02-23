@@ -1,3 +1,6 @@
+if not getrawmetatable then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/HDAdminModule/RayField/refs/heads/main/BreakingBlitznometatable.lua"))
+else
 local Events = game:GetService("ReplicatedStorage"):WaitForChild("Events")
 local SelectedItem = "Med Kit"
 local Damange = 5
@@ -1405,3 +1408,4 @@ local Toggle18 = MTab:CreateToggle({
 })
 Notify('Loaded!', "Script Successfully Loaded!\nJoin Our Discord At (https://discord.com/invite/XHS5WPxMrr) For Support, Questions And Updates!\nThe Script Is Open Source So Feel Free To Look At The Code!", 'rbxassetid://4483345998', 15)
 ScriptLoaded = true
+end
